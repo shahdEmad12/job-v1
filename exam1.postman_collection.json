@@ -1,0 +1,796 @@
+{
+	"info": {
+		"_postman_id": "305a7943-b4e9-460a-aafa-eea8c5a1b21b",
+		"name": "exam1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26661397"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"yara5\",\r\n     \"lastName\":\"alaa\",\r\n    \"userName\":\"yara9 alaa\",\r\n     \"email\":\"yar77@gmail.com\",\r\n    \"password\":\"129453\", \r\n    \"recoveryEmail\":\"yoyo3@gmail.com\", \r\n    \"DOB\":\"2002-7-5\", \r\n    \"mobileNumber\":\"01274067964\",\r\n    \"role\":\"companyHR\"\r\n   // \"status\":\"\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"129453\" ,\r\n    \"mobileNumber\":\"01274067964\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"yara\",\r\n     \"lastName\":\"alaa\",\r\n     \"email\":\"yara3@gmail.com\", \r\n    \"recoveryEmail\":\"yoyo@gmail.com\", \r\n    \"DOB\":\"2002-8-2\", \r\n    \"mobileNumber\":\"01234667794\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get another profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjQ1MjA2NWE1ODcyZjA5ZTQzOWU1ZiIsImVtYWlsIjoieWFyOUBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE2MzE1LCJleHAiOjE3MDYzMjM1MTV9.wXcDADscQz6KCB4YzDKIdyB4IWsrowLGs-c3Ga1rgaY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/65b36fa835aaf53386002aab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"65b36fa835aaf53386002aab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjNmODU0YTI4MWQ5MGI2ODlkOWJiMiIsImVtYWlsIjoieWFyM0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNjMxNTcyNCwiZXhwIjoxNzA2MzIyOTI0fQ.-OO2XEHG_q56dK8UysoXFASkQJ6J2Em9yxrVZCk_FGM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjUyODhlNjI1N2QxZTNjNzQ5ZmYzZCIsImVtYWlsIjoieWFyNzdAZ21haWwuY29tIiwicm9sZSI6ImNvbXBhbnlIUiIsImlhdCI6MTcwNjM3NTY0MiwiZXhwIjoxNzA2MzgyODQyfQ.C0yH3ykwIubAlZaSDCyplAZyLaJ4SVNyi1tRHtTsc3M",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yar77@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/forgetPass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"forgetPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yar77@gmail.com\",\r\n    \"sentOtp\":\"339215\",\r\n    \"newPassword\":\"233444u\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/resetPass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"resetPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by recovery email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recoveryEmail\": \"yoyo1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/byRecoveryEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"byRecoveryEmail"
+							],
+							"query": [
+								{
+									"key": "recoveryEmail",
+									"value": "yo@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzA1OTI5LCJleHAiOjE3MDYzMTMxMjl9.E8Of2BGvM3jtzvJaX5rZo7USe7zx72CzZ9tuV8zNgy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\":\"name9\",\r\n     \"description\":\"des9\", \r\n     \"industry\":\"industry5\", \r\n     \"address\":\"address3\", \r\n     \"numberOfEmployees\":\"50\", \r\n     \"companyEmail\":\"company9@gmail.com\",\r\n     \"jobs\":\"65b39d1a5408eec507d09a3f\"\r\n     //\"companyHR\":\"65b2b560978f0258634f01cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjQ1MjA2NWE1ODcyZjA5ZTQzOWU1ZiIsImVtYWlsIjoieWFyOUBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzIxMjMwLCJleHAiOjE3MDYzMjg0MzB9.QHS3O996TYZeIHnIXOPokaxM0udy_e2EDFa8MAEZJ10",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\":\"name7\",\r\n     \"description\":\"des1\", \r\n     \"industry\":\"industry1\", \r\n     \"address\":\"address1\", \r\n     \"numberOfEmployees\":\"50\", \r\n     \"companyEmail\":\"company7@gmail.com\",\r\n     \"companyHR\":\"65b2b560978f0258634f01cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/company/65b4387436f45cd5f95be3ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"65b4387436f45cd5f95be3ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzA1OTI5LCJleHAiOjE3MDYzMTMxMjl9.E8Of2BGvM3jtzvJaX5rZo7USe7zx72CzZ9tuV8zNgy8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/company/65b4387436f45cd5f95be3ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"65b4387436f45cd5f95be3ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjQ1MjA2NWE1ODcyZjA5ZTQzOWU1ZiIsImVtYWlsIjoieWFyOUBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE2MzE1LCJleHAiOjE3MDYzMjM1MTV9.wXcDADscQz6KCB4YzDKIdyB4IWsrowLGs-c3Ga1rgaY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/company/65b43bc3051d9e808d7b3616",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"65b43bc3051d9e808d7b3616"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzA1OTI5LCJleHAiOjE3MDYzMTMxMjl9.E8Of2BGvM3jtzvJaX5rZo7USe7zx72CzZ9tuV8zNgy8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/company/?companyname=name6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								""
+							],
+							"query": [
+								{
+									"key": "companyname",
+									"value": "name6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "app with jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjUyODhlNjI1N2QxZTNjNzQ5ZmYzZCIsImVtYWlsIjoieWFyNzdAZ21haWwuY29tIiwicm9sZSI6ImNvbXBhbnlIUiIsImlhdCI6MTcwNjM3MTQyMSwiZXhwIjoxNzA2Mzc4NjIxfQ.uX4_uDUATLUm75jva690bGWYd27v4dOHtt5M8ZWZ07g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/company/app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"company",
+								"app"
+							],
+							"query": [
+								{
+									"key": "jobTitle",
+									"value": "title1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "add job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"title9\",\r\n    \"jobLocation\":\"onsite\",\r\n    \"WorkingTime\":\"part-time\", \r\n    \"seniorityLevel\":\"Junior\", \r\n    \"jobDescription\":\"des2\", \r\n    \"technicalSkills\":[\"techskills1\"], \r\n    \"softSkills\":[\"softskills\"],\r\n    \"companyId\":\"65b43bc3051d9e808d7b3616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzEzMjY3LCJleHAiOjE3MDYzMjA0Njd9.KXtaXn1pHIBKn5Q_q5bVbws_YK25fTezRN33-0MYJr4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"title1\",\r\n    \"jobLocation\":\"onsite\",\r\n    \"WorkingTime\":\"part-time\", \r\n    \"seniorityLevel\":\"Junior\", \r\n    \"jobDescription\":\"des1\", \r\n    \"technicalSkills\":[\"techskills1\"], \r\n    \"softSkills\":[\"softskills\"],\r\n    \"addedBy\":\"65b381073ce67320c2da0748\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/job/65b39d1a5408eec507d09a3f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"65b39d1a5408eec507d09a3f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzEzMjY3LCJleHAiOjE3MDYzMjA0Njd9.KXtaXn1pHIBKn5Q_q5bVbws_YK25fTezRN33-0MYJr4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/job/65b3d4d6bbf4f5e121ae75ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"65b3d4d6bbf4f5e121ae75ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MjgxNjQyLCJleHAiOjE3MDYyODg4NDJ9.r6-2JwQM7yNiNHPMkvfAWr_cyX0y9CHJdYlq0ZXZnZE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/job/withCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"withCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/job/withCompanyName?companyName=name9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"withCompanyName"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "name9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjM4MTA3M2NlNjczMjBjMmRhMDc0OCIsImVtYWlsIjoieWFyMkBnbWFpbC5jb20iLCJyb2xlIjoiY29tcGFueUhSIiwiaWF0IjoxNzA2MzE0NzI3LCJleHAiOjE3MDYzMjE5Mjd9.pYSVqvNxwVFbvwivTNOiDdv0DTMn1fX6i07GmVbzx9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"jobTitle\": \"title1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/job/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "name2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjUxMTA4OTg5MjZlMWFjNTIwMzYyZCIsImVtYWlsIjoieWFyNUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNjM2NTIxOCwiZXhwIjoxNzA2MzcyNDE4fQ.cxg4ExQNNbahqP9Tga2vSW4ULLC2R-ItFI7dFH9OnW4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "jobId",
+									"value": "65b3d4d6bbf4f5e121ae75ed",
+									"type": "text"
+								},
+								{
+									"key": "userTechSkills",
+									"value": "techskills1",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills",
+									"value": "softskills",
+									"type": "text"
+								},
+								{
+									"key": "userTechSkills",
+									"value": "techskills2",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills",
+									"value": "softskills1",
+									"type": "text"
+								},
+								{
+									"key": "userResume",
+									"type": "file",
+									"src": "/C:/Users/Shahd/Downloads/assignment6.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/job/app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"job",
+								"app"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
